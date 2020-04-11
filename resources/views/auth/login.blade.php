@@ -25,7 +25,6 @@
     {!! Form::close() !!}
   </div>
   
-  {{ link_to_route('
 </div>
 
 @endsection
