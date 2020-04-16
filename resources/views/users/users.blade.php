@@ -6,9 +6,7 @@
         <img class="mr-2 rouded" src="{{ Gravatar::src($user->email, 50) }}" alt=""></img>
         <div class="media-body">
             {{ $user->name }}
-        </div>
-        <div>
-            <p>{!! link_to_route('users.show', 'View Profile', ['id'=>$user->id] !!}</p>
+            {!! link_to_route('users.show', 'View Profile', ['id'=>$user->id], ['class'=>'btn btn-primary ml-2']) !!}
         </div>
     </li>
     @endforeach
