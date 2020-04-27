@@ -2,7 +2,7 @@
 
 <ul class="list-unstyled">
     @foreach($users as $user) 
-    <li class="media">
+    <li class="media mb-2">
         <img class="mr-2 rouded" src="{{ Gravatar::src($user->email, 50) }}" alt=""></img>
         <div class="media-body">
             {{ $user->name }}
