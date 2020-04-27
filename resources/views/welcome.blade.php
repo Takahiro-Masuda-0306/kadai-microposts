@@ -5,14 +5,7 @@
     @if (Auth::check())
         <div class="row">
             <div class="col-sm-4">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">{{ Auth::user()->name }}</h3>
-                    </div>
-                    <div class="card-body">
-                        <img class="img-fluid rounded" src="{{ Gravatar::src(Auth::user()->email, 500) }}"></img>
-                    </div>
-                </div>
+                @include('users.card', ['user'=>\Auth::user()])
             </div>
             <div class="col-sm-8">
                 @if(Auth::id() == $user->id)
